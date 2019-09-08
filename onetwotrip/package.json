@@ -12,7 +12,9 @@
     "getErrors": {
       "command": "node ./src/index.js --getErrors",
       "env": {
-        "NODE_ENV": "localhost"
+        "NODE_ENV": "localhost",
+        "REDIS_HOST": "",
+        "REDIS_PORT": 26379
       }
     }
   },

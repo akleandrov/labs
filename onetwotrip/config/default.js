@@ -1,8 +1,8 @@
 module.exports = {
   redis: {
     connection: {
-      host: '',
-      port: 26379,
+      host: process.env.REDIS_HOST || '',
+      port: process.env.REDIS_PORT || 26379,
       connect_timeout: 3600000,
     },
     channels: {
@@ -18,10 +18,11 @@ module.exports = {
   },
   timeouts: {
     generate_message: 500,
+    generator_ttl_s: 5,
     set_generator_status: 3000,
-    interval_check_status: 5000,
-    wait_alive_response: 7500,
-    wait_election_complete: 10000,
+    interval_check_status: 3000,
+    wait_alive_response: 5000,
+    wait_election_complete: 7000,
   },
   messageTypes: {
     REQUEST: 'REQUEST',

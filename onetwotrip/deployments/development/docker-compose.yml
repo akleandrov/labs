@@ -8,6 +8,8 @@ services:
       - redis
     environment:
       NODE_ENV: development
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
   redis:
     image: 'bitnami/redis:latest'
     environment:

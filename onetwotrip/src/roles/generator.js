@@ -12,7 +12,7 @@ function generateMessages() {
 }
 
 function setStatus() {
-  redis.setex(keys.GENERATOR_STATUS, 5, 'enabled');
+  redis.setex(keys.GENERATOR_STATUS, timeouts.generator_ttl_s, 'enabled');
 }
 function start() {
   messagesIntervalId = setInterval(generateMessages, timeouts.generate_message);
