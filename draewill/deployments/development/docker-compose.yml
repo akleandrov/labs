@@ -1,0 +1,12 @@
+version: '3.6'
+services:
+  api:
+    build: ../../.
+    image: draewil:latest
+    container_name: draewil
+    restart: always
+    environment:
+      NODE_ENV: development
+      LIBRARY_URL: https://raw.githubusercontent.com/DraewilTech/interview-assets/master/RadioLibrary.xml
+    ports:
+     - "3000:3000"
