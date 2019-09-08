@@ -1,3 +1,7 @@
+# Комментарии
+Для выборов сделал наколеночный алгоритм, похожий на RAFT, на основе вермени жизни.
+Для exactly once блокируем список при получении сообщения.
+
 docker-compose -f ./deployments/development/docker-compose.yml build
 docker-compose -f ./deployments/development/docker-compose.yml up -d --scale worker=5
 
