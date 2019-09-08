@@ -1,0 +1,36 @@
+{
+  "name": "onetwotrip",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:get-errors": "better-npm-run getErrors"
+  },
+  "betterScripts": {
+    "getErrors": {
+      "command": "node ./src/index.js --getErrors",
+      "env": {
+        "NODE_ENV": "localhost"
+      }
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "better-npm-run": "^0.1.1",
+    "config": "^3.2.2",
+    "ioredis": "^4.14.0",
+    "optimist": "^0.6.1",
+    "randomstring": "^1.1.5",
+    "redis": "^2.8.0",
+    "uuid": "^3.3.3",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.3.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2"
+  }
+}
